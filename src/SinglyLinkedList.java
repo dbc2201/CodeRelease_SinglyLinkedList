@@ -17,6 +17,9 @@ private static class Node {
   * 2. A reference of the next node of the current node of type 'Node'.
   * */
 
+  private int data;
+  private Node nextNode;
+
 }
 
 }

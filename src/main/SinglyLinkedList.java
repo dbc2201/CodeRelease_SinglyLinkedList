@@ -53,7 +53,8 @@ public class SinglyLinkedList {
   * Usually this main method will be outside of the linked list class file
   * */
   public static void main(String[] args) {
-
+    //  create an object for the SinglyLinkedList class
+    SinglyLinkedList linkedList = new SinglyLinkedList();
   }
 
 }

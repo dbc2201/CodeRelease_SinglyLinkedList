@@ -7,3 +7,4 @@ About the Singly Linked List
 ___
 
 ### Please feel free to add issues for this project / suggest updates / ask doubts on the Issues tab of this repo.
+[Use this link to add a new issue](https://github.com/dbc2201/CodeRelease_SinglyLinkedList/issues/new)

@@ -33,8 +33,11 @@ private static class Node {
     return nextNode;
   }
 
-
-
+  //  add constructor for the Node class to initialize the objects
+  public Node(int data, Node nextNode) {
+    this.data = data;
+    this.nextNode = nextNode;
+  }
 }
 
 }

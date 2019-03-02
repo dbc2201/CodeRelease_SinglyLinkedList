@@ -60,8 +60,11 @@ public class SinglyLinkedList {
   @Override
   public String toString() {
     StringBuilder result = new StringBuilder();
+    result.append("[");
 
 
+
+    result.append("]");
     return result.toString();
   }
 }

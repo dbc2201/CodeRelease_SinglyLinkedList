@@ -69,9 +69,12 @@ public class SinglyLinkedList {
     //  display the linkedlist via println() method
     System.out.println(linkedList);
 
-    //  add method call to insert a new node at head
-    linkedList.insertHead(1);
+    //  iterate a loop 5 times to insert 5 values in the linked list
+    for (int i = 0; i < 5; i++) {
+      linkedList.insert(i);
+    }
 
+    //  print the linked list after insertion
     System.out.println(linkedList);
 
   }

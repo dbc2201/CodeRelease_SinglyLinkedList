@@ -92,4 +92,9 @@ public class SinglyLinkedList {
     result.append("]");
     return result.toString();
   }
+
+  private void insertHead() {
+
+  }
+
 }

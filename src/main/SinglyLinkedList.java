@@ -66,6 +66,7 @@ public class SinglyLinkedList {
     //  create an object for the SinglyLinkedList class
     SinglyLinkedList linkedList = new SinglyLinkedList();
 
+    System.out.println("Printing the list first time:");
     //  display the linkedlist via println() method
     System.out.println(linkedList);
 

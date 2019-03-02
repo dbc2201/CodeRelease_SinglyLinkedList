@@ -1,43 +1,45 @@
 public class SinglyLinkedList {
 
   /*
-  * Specifications for the Singly Linked List Class:
-  * 1. A pointer to the first node of the list called 'Head' of 'Node' type.
-  * 2. A variable to store the current number of node in the list called 'size'.
-  * 3. A specification class for the 'Node' type for the SinglyLinkedList
-  * 4. Private helper methods for the methods
-  * 5. Public methods for the SinglyLinkedList class to serve as the functions of the list.
-  * */
+   * Specifications for the Singly Linked List Class:
+   * 1. A pointer to the first node of the list called 'Head' of 'Node' type.
+   * 2. A variable to store the current number of node in the list called 'size'.
+   * 3. A specification class for the 'Node' type for the SinglyLinkedList
+   * 4. Private helper methods for the methods
+   * 5. Public methods for the SinglyLinkedList class to serve as the functions of the list.
+   * */
 
-private static class Node {
+  private static class Node {
 
-  /*
-  * Specifications for the Node Class:
-  * 1. A variable/container to hold the data for the node.
-  * 2. A reference of the next node of the current node of type 'Node'.
-  * */
+    /*
+     * Specifications for the Node Class:
+     * 1. A variable/container to hold the data for the node.
+     * 2. A reference of the next node of the current node of type 'Node'.
+     * */
 
-  //  this variable will hold the data for the current node
-  private int data;
+    //  this variable will hold the data for the current node
+    private int data;
 
-  // this reference variable will hold the reference to the next node
-  private Node nextNode;
+    // this reference variable will hold the reference to the next node
+    private Node nextNode;
 
-  //  method to return the 'data' of the current node
-  public int getData() {
-    return data;
+    //  method to return the 'data' of the current node
+    public int getData() {
+      return data;
+    }
+
+    //  method to return the 'next node' of the current node
+    public Node getNextNode() {
+      return nextNode;
+    }
+
+    //  add constructor for the Node class to initialize the objects
+    public Node(int data, Node nextNode) {
+      this.data = data;
+      this.nextNode = nextNode;
+    }
   }
 
-  //  method to return the 'next node' of the current node
-  public Node getNextNode() {
-    return nextNode;
-  }
 
-  //  add constructor for the Node class to initialize the objects
-  public Node(int data, Node nextNode) {
-    this.data = data;
-    this.nextNode = nextNode;
-  }
-}
 
 }

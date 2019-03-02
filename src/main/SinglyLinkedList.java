@@ -55,15 +55,40 @@ public class SinglyLinkedList {
   public static void main(String[] args) {
     //  create an object for the SinglyLinkedList class
     SinglyLinkedList linkedList = new SinglyLinkedList();
+
+    //  display the linkedlist via println() method
+    System.out.println(linkedList);
+
   }
 
   @Override
   public String toString() {
+    //  create a new StringBuilder for returning as the result
     StringBuilder result = new StringBuilder();
+
+    //  append a [ for the start of the list
     result.append("[");
 
+    //  create a copy for the current 'head' node for the list
+    Node temp = this.head;
 
+    //  travers the current linked list
+    while (temp != null) {
 
+      //  append the data of the current node to the result
+      result.append(temp.getData());
+
+      // check if the current node has a next node
+      if (temp.getNextNode() != null) {
+        //  append an arrow to depict the single reference between two nodes
+        result.append(" --> ");
+      }
+
+      //  update the reference of temp to the next node
+      temp = temp.nextNode;
+    }
+
+    //  append a ] for the end of the list
     result.append("]");
     return result.toString();
   }

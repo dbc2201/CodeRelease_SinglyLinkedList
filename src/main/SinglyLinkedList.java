@@ -35,6 +35,16 @@ public class SinglyLinkedList {
       return nextNode;
     }
 
+    //  method to set the value of data for a node
+    public void setData(int data) {
+      this.data = data;
+    }
+
+    //  method to set the reference of a new node as the next node
+    public void setNextNode(Node nextNode) {
+      this.nextNode = nextNode;
+    }
+
     //  add constructor for the Node class to initialize the objects
     public Node(int data, Node nextNode) {
       this.data = data;
@@ -61,6 +71,8 @@ public class SinglyLinkedList {
 
     //  add method call to insert a new node at head
     linkedList.insertHead(1);
+
+    System.out.println(linkedList);
 
   }
 
@@ -96,9 +108,16 @@ public class SinglyLinkedList {
     return result.toString();
   }
 
+  /*
+  * Helper method to insert a new node at head
+  * DO NOT CALL HELPER METHODS FROM THE MAIN METHOD FOR THE LINKED LIST CLASS!
+  * THEY ARE SUPPOSED TO BE INVISIBLE TO THE DEV/USER ALIKE.
+  * */
   private void insertHead(int data) {
     this.head = new Node(data, this.head);
     size++;
   }
+
+
 
 }

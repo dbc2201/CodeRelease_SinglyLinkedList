@@ -136,7 +136,6 @@ public class SinglyLinkedList {
    * THIS IS THE ONLY METHOD THAT IS VISIBLE TO THE DEV/USER TO INSERT A NEW NODE
    * */
   public void insert(int data) {
-
     /*
     * check whether the head points to a null reference,
     * if true, it means that the linked list is empty
@@ -157,6 +156,15 @@ public class SinglyLinkedList {
       }
       insertAfter(data, temp);
     }
+  }
+
+  /*
+  * Helper method to delete the first node of a linked list
+  * */
+  private int deleteHead() {
+    int response = -1;
+
+    return response;
   }
 
 }

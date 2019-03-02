@@ -9,6 +9,8 @@ public class SinglyLinkedList {
   * 5. Public methods for the SinglyLinkedList class to serve as the functions of the list.
   * */
 
+private static class Node {
 
+}
 
 }

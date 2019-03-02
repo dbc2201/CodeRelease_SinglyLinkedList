@@ -189,6 +189,16 @@ public class SinglyLinkedList {
 
   private int deleteAfter(Node node) {
     int response = -1;
+
+    //  create a copy of the next node
+    Node temp = node.getNextNode();
+
+    // check if the temp node is null
+    if (temp != null) {
+      response = temp.getData();
+      node.setNextNode(temp.getNextNode());
+    }
+
     size--;
     return response;
   }

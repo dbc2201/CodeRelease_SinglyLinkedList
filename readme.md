@@ -8,3 +8,6 @@ ___
 
 ### Please feel free to add issues for this project / suggest updates / ask doubts on the Issues tab of this repo.
 [Use this link to add a new issue](https://github.com/dbc2201/CodeRelease_SinglyLinkedList/issues/new)
+
+## How to create an issue from code
+[code issue](https://help.github.com/en/articles/opening-an-issue-from-code)

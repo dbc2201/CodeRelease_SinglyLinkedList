@@ -77,9 +77,15 @@ public class SinglyLinkedList {
       System.out.println(linkedList);
     }
 
-    int deleted = linkedList.remove(4);
+    int randomNumber = (int) (Math.random() * 5);
 
-    System.out.println(deleted + " was deleted.");
+    int deleted = linkedList.remove(0);
+
+    if (deleted == -1) {
+      System.out.println(randomNumber + " was not found in the linked list.");
+    } else {
+      System.out.println(deleted + " was deleted.");
+    }
 
     System.out.println(linkedList);
 
@@ -208,11 +214,11 @@ public class SinglyLinkedList {
 
     //  check whether the head node is the node to be deleted
     if (this.head.data == data) {
-      deleteHead();
+      response = deleteHead();
     } else {
       //  create a copy of the current head
       Node temp = this.head;
-      while (temp.getNextNode() != null) {
+      while (temp != null) {
         if (temp.getNextNode().getData() == data) {
           response = deleteAfter(temp);
           break;

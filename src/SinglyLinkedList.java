@@ -20,6 +20,13 @@ private static class Node {
   private int data;
   private Node nextNode;
 
+  public int getData() {
+    return data;
+  }
+
+  public Node getNextNode() {
+    return nextNode;
+  }
 }
 
 }

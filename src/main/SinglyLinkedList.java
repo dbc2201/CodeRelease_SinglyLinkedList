@@ -59,6 +59,9 @@ public class SinglyLinkedList {
     //  display the linkedlist via println() method
     System.out.println(linkedList);
 
+    //  add method call to insert a new node at head
+    linkedList.insertHead(1);
+
   }
 
   @Override

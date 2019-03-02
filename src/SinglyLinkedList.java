@@ -11,6 +11,12 @@ public class SinglyLinkedList {
 
 private static class Node {
 
+  /*
+  * Specifications for the Node Class:
+  * 1. A variable/container to hold the data for the node.
+  * 2. A reference of the next node of the current node of type 'Node'.
+  * */
+
 }
 
 }

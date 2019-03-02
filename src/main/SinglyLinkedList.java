@@ -93,8 +93,8 @@ public class SinglyLinkedList {
     return result.toString();
   }
 
-  private void insertHead() {
-
+  private void insertHead(int data) {
+    this.head = new Node(data, this.head);
   }
 
 }

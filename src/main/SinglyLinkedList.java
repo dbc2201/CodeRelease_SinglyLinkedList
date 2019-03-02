@@ -95,6 +95,7 @@ public class SinglyLinkedList {
 
   private void insertHead(int data) {
     this.head = new Node(data, this.head);
+    size++;
   }
 
 }

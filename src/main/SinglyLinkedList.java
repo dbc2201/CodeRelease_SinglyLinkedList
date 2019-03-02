@@ -77,7 +77,7 @@ public class SinglyLinkedList {
       System.out.println(linkedList);
     }
 
-    int deleted = linkedList.deleteHead();
+    int deleted = linkedList.remove(4);
 
     System.out.println(deleted + " was deleted.");
 
@@ -180,6 +180,35 @@ public class SinglyLinkedList {
 
       //  point the head pointer to the next node of old head
       this.head = temp.getNextNode();
+    }
+
+    //  update the size of the list
+    size--;
+    return response;
+  }
+
+  private int deleteAfter(Node node) {
+    int response = -1;
+    size--;
+    return response;
+  }
+
+  public int remove(int data) {
+    int response = -1;
+
+    //  check whether the head node is the node to be deleted
+    if (this.head.data == data) {
+      deleteHead();
+    } else {
+      //  create a copy of the current head
+      Node temp = this.head;
+      while (temp.getNextNode() != null) {
+        if (temp.getNextNode().getData() == data) {
+          response = deleteAfter(temp);
+          break;
+        }
+        temp = temp.getNextNode();
+      }
     }
     return response;
   }

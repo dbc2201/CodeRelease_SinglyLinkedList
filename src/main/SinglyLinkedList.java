@@ -57,4 +57,11 @@ public class SinglyLinkedList {
     SinglyLinkedList linkedList = new SinglyLinkedList();
   }
 
+  @Override
+  public String toString() {
+    StringBuilder result = new StringBuilder();
+
+
+    return result.toString();
+  }
 }

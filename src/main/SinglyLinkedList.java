@@ -48,4 +48,12 @@ public class SinglyLinkedList {
   //  this variable will hold the size for the current singly linked list
   public int size = 0;
 
+  /*
+  * main method, this method is written here just for the demo of the linked list.
+  * Usually this main method will be outside of the linked list class file
+  * */
+  public static void main(String[] args) {
+
+  }
+
 }

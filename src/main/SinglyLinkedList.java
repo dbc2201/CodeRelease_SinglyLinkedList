@@ -53,10 +53,10 @@ public class SinglyLinkedList {
   }
 
   //  this reference variable will hold the reference to the first node, 'head'
-  public Node head = null;
+  private Node head = null;
 
   //  this variable will hold the size for the current singly linked list
-  public int size = 0;
+  private int size = 0;
 
   /*
   * main method, this method is written here just for the demo of the linked list.
@@ -100,7 +100,7 @@ public class SinglyLinkedList {
       }
 
       //  update the reference of temp to the next node
-      temp = temp.nextNode;
+      temp = temp.getNextNode();
     }
 
     //  append a ] for the end of the list
@@ -118,6 +118,40 @@ public class SinglyLinkedList {
     size++;
   }
 
+  /*
+   * Helper method to insert a new node after a given node
+   * */
+  private void insertAfter(int data, Node node) {
+    node.setNextNode(new Node(data, node.getNextNode()));
+    size++;
+  }
 
+  /*
+   * Actual method to insert a new node in the singly linked list
+   * THIS IS THE ONLY METHOD THAT IS VISIBLE TO THE DEV/USER TO INSERT A NEW NODE
+   * */
+  public void insert(int data) {
+
+    /*
+    * check whether the head points to a null reference,
+    * if true, it means that the linked list is empty
+    * */
+    if (this.head == null) {
+      //  insert the data as a new node at the head
+      insertHead(data);
+    } else {
+      //  traverse the linked list to the end
+
+      //  create a copy of the current head
+      Node temp = this.head;
+
+      //  check whether the next node of the current node is null
+      while (temp.getNextNode() != null) {
+        //  update the reference of the temp node
+        temp = temp.getNextNode();
+      }
+      insertAfter(data, temp);
+    }
+  }
 
 }

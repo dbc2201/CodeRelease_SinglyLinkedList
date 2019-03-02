@@ -59,9 +59,9 @@ public class SinglyLinkedList {
   private int size = 0;
 
   /*
-  * main method, this method is written here just for the demo of the linked list.
-  * Usually this main method will be outside of the linked list class file
-  * */
+   * main method, this method is written here just for the demo of the linked list.
+   * Usually this main method will be outside of the linked list class file
+   * */
   public static void main(String[] args) {
     //  create an object for the SinglyLinkedList class
     SinglyLinkedList linkedList = new SinglyLinkedList();
@@ -77,7 +77,11 @@ public class SinglyLinkedList {
       System.out.println(linkedList);
     }
 
+    int deleted = linkedList.deleteHead();
 
+    System.out.println(deleted + " was deleted.");
+
+    System.out.println(linkedList);
 
   }
 
@@ -114,10 +118,10 @@ public class SinglyLinkedList {
   }
 
   /*
-  * Helper method to insert a new node at head
-  * DO NOT CALL HELPER METHODS FROM THE MAIN METHOD FOR THE LINKED LIST CLASS!
-  * THEY ARE SUPPOSED TO BE INVISIBLE TO THE DEV/USER ALIKE.
-  * */
+   * Helper method to insert a new node at head
+   * DO NOT CALL HELPER METHODS FROM THE MAIN METHOD FOR THE LINKED LIST CLASS!
+   * THEY ARE SUPPOSED TO BE INVISIBLE TO THE DEV/USER ALIKE.
+   * */
   private void insertHead(int data) {
     this.head = new Node(data, this.head);
     size++;
@@ -137,9 +141,9 @@ public class SinglyLinkedList {
    * */
   public void insert(int data) {
     /*
-    * check whether the head points to a null reference,
-    * if true, it means that the linked list is empty
-    * */
+     * check whether the head points to a null reference,
+     * if true, it means that the linked list is empty
+     * */
     if (this.head == null) {
       //  insert the data as a new node at the head
       insertHead(data);
@@ -159,11 +163,24 @@ public class SinglyLinkedList {
   }
 
   /*
-  * Helper method to delete the first node of a linked list
-  * */
+   * Helper method to delete the first node of a linked list
+   * */
   private int deleteHead() {
+    //  flag variable to hold the value of deleted head or -1 to show nothing deleted
     int response = -1;
 
+    //  check whether the list has a head node to delete
+    if (this.head != null) {
+
+      //  set the response var to the value of the current head
+      response = this.head.getData();
+
+      //  create a copy of the current head of the linked list
+      Node temp = this.head;
+
+      //  point the head pointer to the next node of old head
+      this.head = temp.getNextNode();
+    }
     return response;
   }
 

@@ -17,16 +17,24 @@ private static class Node {
   * 2. A reference of the next node of the current node of type 'Node'.
   * */
 
+  //  this variable will hold the data for the current node
   private int data;
+
+  // this reference variable will hold the reference to the next node
   private Node nextNode;
 
+  //  method to return the 'data' of the current node
   public int getData() {
     return data;
   }
 
+  //  method to return the 'next node' of the current node
   public Node getNextNode() {
     return nextNode;
   }
+
+
+
 }
 
 }

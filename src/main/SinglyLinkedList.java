@@ -77,7 +77,7 @@ public class SinglyLinkedList {
       System.out.println(linkedList);
     }
 
-    int randomNumber = (int) (Math.random() * 5);
+    int randomNumber = (int) (Math.random() * 10);
 
     int deleted = linkedList.remove(randomNumber);
 

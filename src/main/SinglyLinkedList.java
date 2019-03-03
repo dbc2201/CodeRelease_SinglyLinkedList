@@ -79,7 +79,7 @@ public class SinglyLinkedList {
 
     int randomNumber = (int) (Math.random() * 5);
 
-    int deleted = linkedList.remove(0);
+    int deleted = linkedList.remove(randomNumber);
 
     if (deleted == -1) {
       System.out.println(randomNumber + " was not found in the linked list.");
